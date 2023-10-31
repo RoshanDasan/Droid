@@ -63,10 +63,23 @@ export const HeroImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   width: 100%;
   height: 100vh;
-  @media (max-width: 1024px) {
-    border: 1px solid red;
+
+`;
+
+export const MobileWrapper = styled(FlexWrapper)`
+  @media (max-width: 770px) {
+    display: none;
+    border: 1px solid blue;
   }
 `;
+export const DesktopWrapper = styled(FlexWrapper)`
+  @media (min-width: 770px) {
+    display: none;
+    border: 1px solid red;
+    
+  }
+`;
+
+

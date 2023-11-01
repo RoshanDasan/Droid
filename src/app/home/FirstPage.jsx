@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import backgroundImage from "/public/images/background.png";
+import backgroundImage from "/public/images/background1.png";
 import Icon from "../../../public/images/icon.png";
 import droidIcon from "../../../public/images/droidicon.png";
 import Unlock from "../../../public/images/UnlocktheFutureofTokens.png";
@@ -11,18 +11,22 @@ import Header from '../components/Header'
 import {
   FlexWrapper,
   Text,
-  HeroImage,
+  // HeroImage,
   DesktopWrapper,
   MobileWrapper,
 } from "../commonstyles/styles";
 
-const IconWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  top: 5%;
-  left: 1%;
-  position: absolute;
+export const HeroImage = styled.div`
+  background-image: url(${({ image }) => image.src});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: ${({ width }) => width || "100%"};
+  height: ${({ height }) => height || "100vh"};
+  position: ${({position})=> position} 
+  z-index: 1; 
 `;
+
 const HeaderTags = styled.div`
   display: flex;
   // margin: 20px 0px 0px 70px;
@@ -76,32 +80,11 @@ const KnowMore = styled.div`
   display: flex;
   color: #476fff;
 `;
-const Wrapper = styled.div`
-  width: 100%;
-  height: 200px;
-`;
+
 
 const FirstPage = () => {
   return (
-  <HeroImage image={backgroundImage}>
-      {/* <FlexWrapper justifyContent="space-between">
-        <IconWrapper>
-          <div className="w-10 mr-2">
-            <img src={Icon.src} alt="icon" />
-          </div>
-          <div className="w-15 mt-2 ">
-            <img src={droidIcon.src} alt="droid" />
-          </div>
-        </IconWrapper>
-        <HeaderTags>
-          <Text margin="3px 33px 3px 0px">What is droid?</Text>
-          <Text margin="3px 33px 3px 0px">Features</Text>
-          <Text margin="3px 33px 3px 0px">System</Text>
-        </HeaderTags>
-        <DesktopWrapper>
-        <Button>Get started</Button>
-        </DesktopWrapper>
-      </FlexWrapper> */}
+  <HeroImage image={backgroundImage} position="relative">
       <Header />
       <MobileWrapper>
       <FlexWrapper

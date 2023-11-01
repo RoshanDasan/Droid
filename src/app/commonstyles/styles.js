@@ -49,24 +49,20 @@ export const Text = styled.p`
   }
   @media (max-width: 524px) {
     font-size: 14px; /* Adjust font size for even smaller screens */
+
   }
   @media (max-width: 320px) {
     font-size: 12px; /* Adjust font size for the smallest screens */
+
+
   }
   @media (min-width: 952px) {
     text-align: ${({ textAlign }) => textAlign};
+
   }
 }`;
 
-export const HeroImage = styled.div`
-  background-image: url(${({image})=>image.src});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
 
-`;
 
 export const MobileWrapper = styled(FlexWrapper)`
   @media (max-width: 770px) {
@@ -78,8 +74,5 @@ export const DesktopWrapper = styled(FlexWrapper)`
   @media (min-width: 770px) {
     display: none;
     border: 1px solid red;
-    
   }
 `;
-
-
